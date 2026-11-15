@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXORA AI | Neural Intelligence System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon">N</div>
+      <div>
+        <h2>NEXORA<span> AI</span></h2>
+        <small>NEURAL INTELLIGENCE</small>
+      </div>
+    </div>
+
+    <button class="new-chat" id="newChat">? New Conversation</button>
+
+    <nav>
+      <p class="nav-label">MAIN SYSTEM</p>
+      <button class="nav-item active" data-page="chat">? AI Assistant</button>
+      <button class="nav-item" data-page="memory">? Memory Base</button>
+      <button class="nav-item" data-page="knowledge">? Knowledge Base</button>
+      <button class="nav-item" data-page="settings">? Settings</button>
+    </nav>
+
+    <div class="system-status">
+      <span class="status-dot"></span>
+      SYSTEM ONLINE
+      <small>Local prototype</small>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <header class="topbar">
+      <div>
+        <h3 id="pageTitle">AI Assistant</h3>
+        <p id="pageSubtitle">Your intelligent companion</p>
+      </div>
+
+      <div class="top-status">
+        <span class="status-dot"></span>
+        NEXORA ONLINE
+      </div>
+    </header>
+
+    <!-- CHAT PAGE -->
+    <section class="page active" id="chatPage">
+
+      <div class="chat-area" id="chatArea">
+
+        <div class="welcome" id="welcome">
+          <div class="ai-orb">
+            <div class="orb-inner">N</div>
+          </div>
+
+          <p class="eyebrow">NEXORA INTELLIGENCE SYSTEM</p>
+
+          <h1>WELCOME TO <span>NEXORA AI</span></h1>
+
+          <p class="welcome-text">
+            Your intelligent assistant is ready.
+            Ask a question, learn something new
+            or start a conversation.
+          </p>
+
+          <div class="suggestions">
+            <button class="suggestion" data-question="What is NEXORA AI?">
+              What is NEXORA AI?
+            </button>
+
+            <button class="suggestion" data-question="Teach me mathematics">
+              Teach me mathematics
+            </button>
+
+            <button class="suggestion" data-question="What is artificial intelligence?">
+              What is artificial intelligence?
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="composer">
+        <div class="input-row">
+          <button class="icon-button" id="micButton">??</button>
+
+          <input
+            id="messageInput"
+            type="text"
+            placeholder="Message NEXORA AI..."
+            autocomplete="off"
+          >
+
+          <button class="send-button" id="sendButton">
+            SEND ?
+          </button>
+        </div>
+
+        <p class="disclaimer">
+          NEXORA AI Prototype • Programmed knowledge and local memory
+        </p>
+      </div>
+
+    </section>
+
+    <!-- MEMORY PAGE -->
+    <section class="page" id="memoryPage">
+
+      <div class="content-panel">
+
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">PERSONAL INTELLIGENCE STORAGE</p>
+            <h1>MEMORY <span>BASE</span></h1>
+            <p>Manage information NEXORA AI remembers on this device.</p>
+          </div>
+
+          <div class="memory-count" id="memoryCount">
+            0 MEMORIES
+          </div>
+        </div>
+
+        <div class="memory-form">
+          <h3>? Add a new memory</h3>
+
+          <input
+            id="memoryInput"
+            placeholder="What should NEXORA AI remember?"
+          >
+
+          <button class="primary-button" id="saveMemory">
+            SAVE MEMORY
+          </button>
+        </div>
+
+        <h3 class="subheading">SAVED MEMORIES</h3>
+
+        <div id="memoryList" class="memory-list"></div>
+
+        <div class="memory-info">
+          <strong>Privacy information</strong>
+          <p>
+            Your memories are stored in this browser using local storage.
+            They are not automatically uploaded to a server.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KNOWLEDGE PAGE -->
+    <section class="page" id="knowledgePage">
+
+      <div class="content-panel">
+
+        <p class="eyebrow">PROGRAMMED INTELLIGENCE</p>
+
+        <h1>KNOWLEDGE <span>BASE</span></h1>
+
+        <p>
+          These are the questions and answers NEXORA AI is programmed to understand.
+        </p>
+
+        <div class="knowledge-form">
+
+          <h3>Add your own question and answer</h3>
+
+          <input
+            id="questionInput"
+            placeholder="Enter a question"
+          >
+
+          <textarea
+            id="answerInput"
+            placeholder="Enter the answer NEXORA AI should give"
+          ></textarea>
+
+          <button class="primary-button" id="addKnowledge">
+            ADD TO KNOWLEDGE BASE
+          </button>
+
+        </div>
+
+        <h3 class="subheading">PROGRAMMED QUESTIONS</h3>
+
+        <div id="knowledgeList" class="knowledge-list"></div>
+
+      </div>
+    </section>
+
+    <!-- SETTINGS PAGE -->
+    <section class="page" id="settingsPage">
+
+      <div class="content-panel">
+
+        <p class="eyebrow">SYSTEM CONFIGURATION</p>
+
+        <h1>AI <span>SETTINGS</span></h1>
+
+        <div class="setting-card">
+          <div>
+            <h3>AI Voice</h3>
+            <p>Choose how NEXORA AI speaks.</p>
+          </div>
+
+          <select id="voiceGender">
+            <option value="female">Female Voice</option>
+            <option value="male">Male Voice</option>
+            <option value="child">Child Voice</option>
+          </select>
+        </div>
+
+        <div class="setting-card">
+          <div>
+            <h3>Speech</h3>
+            <p>Allow NEXORA AI to speak its responses.</p>
+          </div>
+
+          <label class="switch">
+            <input type="checkbox" id="speechEnabled" checked>
+            <span></span>
+          </label>
+        </div>
+
+        <div class="setting-card">
+          <div>
+            <h3>Conversation Memory</h3>
+            <p>Keep previous conversations on this device.</p>
+          </div>
+
+          <label class="switch">
+            <input type="checkbox" id="conversationMemory" checked>
+            <span></span>
+          </label>
+        </div>
+
+        <div class="setting-card">
+          <div>
+            <h3>Clear Conversation History</h3>
+            <p>Delete stored conversations from this browser.</p>
+          </div>
+
+          <button class="danger-button" id="clearHistory">
+            CLEAR HISTORY
+          </button>
+        </div>
+
+        <div class="setting-card">
+          <div>
+            <h3>Clear All Memories</h3>
+            <p>Delete saved personal memories.</p>
+          </div>
+
+          <button class="danger-button" id="clearMemories">
+            CLEAR MEMORIES
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      POWERED BY <strong>NEXORA TECHNOLOGIES</strong>
+    </footer>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
